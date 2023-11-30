@@ -3,7 +3,9 @@ import './Statistics.css'
 export const Statistics = ({ title, stats }) => {
     return (
         <section className="statistics">
-            <h2 className="statisticsTitle">{title}</h2>
+            {title.length > 0 &&
+                <h2 className="statisticsTitle">{title}</h2>
+            }
             <ul className="stat-list">
                 {stats.map(({id,label,percentage}) => {
                     return (
